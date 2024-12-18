@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="wrap">
+            <h1>Todo List</h1>
+            <section class="today">
+                <label>오늘 할일</label>
+                <input id="user">
+                <button id="add">+</button>
+            </section>
+            <section class="todayList">
+                <ul class="tabs">
+                    <li id="all" class="on">모두</li>
+                    <li id="going">진행중</li>
+                    <li id="done">끝난 일</li>
+                </ul>
+                <div id="taskBoard">
+                    <!-- <div class="task">
+                        <div>공부하기</div>
+                        <div>
+                            <button>check</button>
+                            <button>delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="js/custom3.js"></script>
+</body>
+</html>
+<!-- 
+1. 사용자가 값을 입력함
+2. + 버튼을 클릭하면 할일이 추가됨
+3. check버튼을 누르면 믿줄이 생김
+
+check버튼을 누르면 할일이 끝나면서 밑줄이 간다
+1. check버튼을 클릭하는 순간 true, false
+2. true이면 끝난걸로 간주하고 밑줄생김
+3. false이면 안끝난걸로 간주하고 그대로(밑줄안생김)
+
+delete버튼을 누르면 삭제가 된다
+1. index번호가 같은 리스트를 찾음
+2. 
+
+
+
+
+id가 all이면 전체리스트를 보여줌
+id가 going이면 진행중인 리스트를 보여줌
+ isComplete == false
+id가 done이면 끝난 리스트를 보여줌
+ isComplete == true
+
+
+render수정
+선택한 탭에 따라서 리스트를 다르게 보여줘야함
+all ==> taskList
+going, done ==> filterList
+
+선택한 탭에 따라서 보여주는것이 틀림
+내가 선택한 탭에 대한 정보는 mode가 가지고 있음
+mode, filterList는 filter함수 뿐만 아니라 render함수에서도 사용해야함 그래서 mode, filterList는 지역변수가 아니라 전역변수로 이용해야함
+
+-->
